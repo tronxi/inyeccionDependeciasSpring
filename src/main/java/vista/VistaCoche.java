@@ -12,9 +12,8 @@ import modelo.entidades.Opcion;
 public class VistaCoche {
 
 	private Scanner sc = new Scanner(System.in);
-	 
 	@Autowired
-	private List<Opcion> listaOpciones;
+	private List<Opcion> listaOpciones ;
 	
 	public void arrancar() {
 		int opcion;

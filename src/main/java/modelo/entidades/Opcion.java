@@ -10,12 +10,11 @@ import modelo.negocio.GestorCoche;
 
 public abstract class Opcion {
 	
+	protected Scanner sc = new Scanner(System.in);
+	
 	private String titulo;
 	
-	public Opcion(String titulo) {
-		this.titulo = titulo;
-	}
-	
+
 	@Autowired
 	protected GestorCoche gc;
 	
@@ -24,10 +23,14 @@ public abstract class Opcion {
 	static {
 		context = new ClassPathXmlApplicationContext("beans.xml");
 	}
-	protected Scanner sc = new Scanner(System.in);
 
 	
 	public abstract void ejecutar();
+	
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	
 	
 	public String getTitulo() {
 		return titulo;

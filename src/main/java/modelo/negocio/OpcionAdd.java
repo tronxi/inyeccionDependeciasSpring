@@ -5,9 +5,6 @@ import modelo.entidades.Opcion;
 
 public class OpcionAdd extends Opcion{
 	
-	public OpcionAdd(String titulo) {
-		super(titulo);
-	}
 	@Override
 	public void ejecutar() {
 		System.out.println("Introduce la marca");
